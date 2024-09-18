@@ -1,4 +1,7 @@
 package com.example.geradorarquivos.application.ports.out;
 
-public class LayoutRepository {
+import com.example.geradorarquivos.domain.entities.Layout;
+
+public interface LayoutRepository {
+    Layout obterLayout(String nomeLayout);
 }

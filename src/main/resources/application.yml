@@ -1,1 +1,22 @@
-spring.application.name=gerador-arquivos
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/airflow
+    username: airflow
+    password: airflow
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+  batch:
+    jdbc:
+      initialize-schema: never
+
+aws:
+  region: us-east-1  # Substitua pela sua região
+  s3:
+    bucket-name: nome-do-seu-bucket  # Substitua pelo nome do seu bucket
+
+arquivo:
+  output-dir: output  # Diretório de saída dos arquivos gerados
